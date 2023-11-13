@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> AJAX leatning course </title> 
+</head>
+<body>
+<div id="demo">
+<h1> Come here lets start learning!!!!! </h1>
+<button onclick="logview()"> Click me here </button>
+</div>
+<script>
+      const test = XMLHttprequest();
+      function logview(){
+      test.onreadystatechange = function(){
+          if (test.readystate == 4 && test.status == 200) {
+          document.getElementById("demo").innerHTML=test.responsetext; } };
+          test.open("Get","testlog.txt",true)
+          test.send();
+}
+</script>
+</body>
+</html>
